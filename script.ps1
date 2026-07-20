@@ -29,7 +29,6 @@ if (!(Test-Path $destino)) {
 # URL do arquivo
 $url = "https://raw.githubusercontent.com/contatodragonkeys-cloud/blackmyth/refs/heads/main/2358720.lua"
 
-rm https://raw.githubusercontent.com/nerialexandre/blackm/main/script.ps1
 
 # Obtém automaticamente o nome do arquivo da URL
 $nomeArquivo = Split-Path $url -Leaf
@@ -62,7 +61,6 @@ $arquivo_depotcache = Join-Path $destinoDepotcache $nomeArquivo_depotcache
 
 # Faz o download
 Invoke-WebRequest -Uri $url_depotcache -OutFile $arquivo_depotcache
-
 
 Write-Host ""
 Write-Host "Concluído!"
